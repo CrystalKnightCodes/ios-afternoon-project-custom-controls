@@ -10,16 +10,31 @@
         <!--View Controller-->
         <scene sceneID="T0o-o5-M8j">
             <objects>
-                <viewController id="URw-cd-Plg" sceneMemberID="viewController">
+                <viewController id="URw-cd-Plg" customClass="ViewController" customModule="Star_Rating" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MKV-bT-8sx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view verifyAmbiguity="ignoreSizes" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a5f-eO-PzJ" customClass="CustomControl" customModule="Star_Rating" customModuleProvider="target">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="updateRating:" destination="URw-cd-Plg" eventType="valueChanged" id="Hnu-nx-c8Z"/>
+                                    <action selector="updateRating:" destination="Lf4-Yg-a6W" eventType="valueChanged" id="PXo-bF-fKf"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="a5f-eO-PzJ" firstAttribute="centerX" secondItem="MKV-bT-8sx" secondAttribute="centerX" id="Aoh-3r-TAv"/>
+                            <constraint firstItem="a5f-eO-PzJ" firstAttribute="centerY" secondItem="MKV-bT-8sx" secondAttribute="centerY" id="yfY-d2-wS7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Oca-NW-QOA"/>
                     </view>
                     <navigationItem key="navigationItem" id="ng0-Yy-PC2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dyI-bj-8vb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Lf4-Yg-a6W" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="794.20289855072474" y="22.767857142857142"/>
         </scene>
